@@ -4,8 +4,8 @@
 #include "../common.h"
 
 typedef struct Params {
-    unsigned int  m_size;
-    unsigned int  n_size;
+    unsigned long m_size;
+    unsigned long n_size;
     unsigned int  n_warmup;
     unsigned int  n_reps;
     unsigned int  n_threads;
@@ -42,8 +42,8 @@ struct Params input_params(int argc, char **argv) {
                 usage();
                 exit(0);
                 break;
-            case 'm': p.m_size        = atoi(optarg); break;
-            case 'n': p.n_size        = atoi(optarg); break;
+            case 'm': p.m_size        = atol(optarg); break;
+            case 'n': p.n_size        = atol(optarg); break;
             case 'w': p.n_warmup      = atoi(optarg); break;
             case 'e': p.n_reps        = atoi(optarg); break;
             case 't': p.n_threads     = atoi(optarg); break;

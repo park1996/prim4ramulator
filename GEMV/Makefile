@@ -7,3 +7,6 @@ all: gemv
 
 gemv: gemv.cpp 
 	$(CC) $(CC_FLAGS) gemv.cpp -o gemv 
+
+clean:
+	rm -rf gemv
